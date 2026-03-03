@@ -40,4 +40,19 @@ public class OccupancyService {
     public boolean isSectorFull(String sectorName) {
         return getOccupancyRate(sectorName) >= 1.0;
     }
+
+
+    /**
+     *
+     * @return true if all sectors are full (garage is full)
+     */
+    public boolean isGarageFull() {
+        List<Spot> allSpots = spotRepository.findAll();
+
+        if (allSpots.isEmpty()) {
+            return true;
+        }
+
+        return allSpots.stream().noneMatch(spot -> !spot.isOccupied());
+    }
 }
