@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+import java.time.LocalTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,6 +16,9 @@ import lombok.Setter;
 @Builder
 public class Sector {
     private String name;
-    private Double basePrice;
+    private BigDecimal basePrice;
     private Integer maxCapacity;
+    private LocalTime openHour;
+    private LocalTime closeHour;
+    private Integer durationLimitMinutes;
 }

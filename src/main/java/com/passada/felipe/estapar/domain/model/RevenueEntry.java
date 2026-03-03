@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDate;
 
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 public class RevenueEntry {
     private Long id;
     private String licensePlate;
-    private Double totalAmount;
+    private BigDecimal totalAmount;
     private String sectorName;
     private Instant entryTime;
     private Instant exitTime;

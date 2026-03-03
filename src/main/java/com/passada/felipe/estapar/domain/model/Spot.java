@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 public class Spot {
-    private String id;
+    private Long id;
     private String sectorName;
     private Double latitude;
     private Double longitude;
