@@ -17,3 +17,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+garage:
+  simulator:
+    url: http://localhost:3000
