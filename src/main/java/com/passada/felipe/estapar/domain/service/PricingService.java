@@ -5,6 +5,8 @@ import com.passada.felipe.estapar.domain.service.pricing.PricingModifierStrategy
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Duration;
 import java.time.Instant;
 
@@ -24,10 +26,11 @@ public class PricingService {
      * @param sectorName name of the sector where the price is being calculated
      * @return hourly price to be applied at entry
      */
-    public double calculateAppliedPrice(double basePrice, String sectorName) {
+    public BigDecimal calculateAppliedPrice(BigDecimal basePrice, String sectorName) {
         double occupancyRate = occupancyService.getOccupancyRate(sectorName);
         PricingModifierStrategy strategy = pricingModifierFactory.resolve(occupancyRate);
-        return basePrice * (1 + strategy.getModifier());
+        BigDecimal modifier = BigDecimal.ONE.add(BigDecimal.valueOf(strategy.getModifier()));
+        return basePrice.multiply(modifier).setScale(2, RoundingMode.HALF_UP);
     }
 
     /**
@@ -38,14 +41,14 @@ public class PricingService {
      * @param appliedPrice estimated hourly price calculated at entry
      * @return total price to be charged at exit
      */
-    public double calculateFinalAmount(Instant entryTime, Instant exitTime, double appliedPrice) {
+    public BigDecimal calculateFinalAmount(Instant entryTime, Instant exitTime, BigDecimal appliedPrice) {
         long totalMinutes = Duration.between(entryTime, exitTime).toMinutes();
 
         if (totalMinutes <= FREE_MINUTES) {
-            return 0.0;
+            return BigDecimal.ZERO;
         }
 
         long hours = (long) Math.ceil(totalMinutes / 60.0);
-        return hours * appliedPrice;
+        return appliedPrice.multiply(BigDecimal.valueOf(hours)).setScale(2, RoundingMode.HALF_UP);
     }
 }
