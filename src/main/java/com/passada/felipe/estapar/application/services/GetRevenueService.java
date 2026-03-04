@@ -4,12 +4,14 @@ import com.passada.felipe.estapar.application.usecases.GetRevenueUseCase;
 import com.passada.felipe.estapar.domain.model.RevenueEntry;
 import com.passada.felipe.estapar.domain.repository.RevenueEntryRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class GetRevenueService implements GetRevenueUseCase {
@@ -18,6 +20,7 @@ public class GetRevenueService implements GetRevenueUseCase {
 
     @Override
     public BigDecimal execute(String sectorName, LocalDate date) {
+        log.info("Calculating revenue for sector '{}' on date {}", sectorName, date);
         List<RevenueEntry> entries = revenueEntryRepository.findBySectorNameAndDate(sectorName, date);
 
         return entries.stream()

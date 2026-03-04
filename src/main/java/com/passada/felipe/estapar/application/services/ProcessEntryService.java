@@ -1,6 +1,8 @@
 package com.passada.felipe.estapar.application.services;
 
 import com.passada.felipe.estapar.application.usecases.ProcessEntryUseCase;
+import com.passada.felipe.estapar.domain.exception.DuplicatedSessionException;
+import com.passada.felipe.estapar.domain.exception.GarageFullException;
 import com.passada.felipe.estapar.domain.model.ParkingSession;
 import com.passada.felipe.estapar.domain.repository.ParkingSessionRepository;
 import com.passada.felipe.estapar.domain.service.OccupancyService;
@@ -21,15 +23,13 @@ public class ProcessEntryService implements ProcessEntryUseCase {
     public void execute(String licensePlate, Instant entryTime) {
         log.info("Processing ENTRY: plate={}, entryTime={}", licensePlate, entryTime);
 
-        //TODO: Substitute for a handler that returns a custom exception with error code and message
         parkingSessionRepository.findByLicensePlateAndExitTimeIsNull(licensePlate)
                 .ifPresent(session -> {
-                    throw new IllegalStateException(
-                            "Já existe uma sessão ativa para a placa: " + licensePlate);
+                    throw new DuplicatedSessionException(licensePlate);
                 });
 
         if(occupancyService.isGarageFull()) {
-            throw new IllegalStateException("Parking lot is full. Cannot process entry for plate: " + licensePlate);
+            throw new GarageFullException(licensePlate);
         }
 
         ParkingSession session = new ParkingSession();

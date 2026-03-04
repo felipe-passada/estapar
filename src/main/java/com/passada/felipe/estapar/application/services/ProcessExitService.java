@@ -1,6 +1,7 @@
 package com.passada.felipe.estapar.application.services;
 
 import com.passada.felipe.estapar.application.usecases.ProcessExitUseCase;
+import com.passada.felipe.estapar.domain.exception.EntityNotFoundException;
 import com.passada.felipe.estapar.domain.model.ParkingSession;
 import com.passada.felipe.estapar.domain.model.RevenueEntry;
 import com.passada.felipe.estapar.domain.model.Spot;
@@ -10,12 +11,14 @@ import com.passada.felipe.estapar.domain.repository.SpotRepository;
 import com.passada.felipe.estapar.domain.service.PricingService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDate;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ProcessExitService implements ProcessExitUseCase {
@@ -28,17 +31,19 @@ public class ProcessExitService implements ProcessExitUseCase {
     @Override
     @Transactional
     public void execute(String licensePlate, Instant exitTime) {
+        log.info("Processing EXIT: plate={}, exitTime={}", licensePlate, exitTime);
         ParkingSession session = parkingSessionRepository.findByLicensePlate(licensePlate)
-                .orElseThrow(() -> new IllegalArgumentException(
-                        "No active parking session found for license plate: " + licensePlate));
+                .orElseThrow(() -> new EntityNotFoundException(
+                        "Active parking session not found for license plate: " + licensePlate));
 
         if (session.getSpotId() != null) {
             Spot spot = spotRepository.findById(session.getSpotId())
-                    .orElseThrow(() -> new IllegalArgumentException(
+                    .orElseThrow(() -> new EntityNotFoundException(
                             "Parking spot not found for session: " + session.getSpotId()));
 
             spot.setOccupied(false);
             spotRepository.save(spot);
+            log.info("Spot {} marked as unoccupied", spot.getId());
         }
 
         BigDecimal totalFee = pricingService.calculateFinalAmount(
@@ -59,5 +64,6 @@ public class ProcessExitService implements ProcessExitUseCase {
         revenueEntryRepository.save(revenueEntry);
 
         parkingSessionRepository.delete(session);
+        log.info("EXIT processed successfully: plate={}, totalFee={}", licensePlate, totalFee);
     }
 }

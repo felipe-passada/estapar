@@ -1,6 +1,9 @@
 package com.passada.felipe.estapar.application.services;
 
 import com.passada.felipe.estapar.application.usecases.ProcessParkedUseCase;
+import com.passada.felipe.estapar.domain.exception.EntityNotFoundException;
+import com.passada.felipe.estapar.domain.exception.SectorFullException;
+import com.passada.felipe.estapar.domain.exception.SpotAlredyOccupiedException;
 import com.passada.felipe.estapar.domain.model.ParkingSession;
 import com.passada.felipe.estapar.domain.model.Sector;
 import com.passada.felipe.estapar.domain.model.Spot;
@@ -32,22 +35,21 @@ public class ProcessParkedService implements ProcessParkedUseCase {
         log.info("PARKED processing: plate={}, lat={}, lng={}", licensePlate, latitude, longitude);
 
         ParkingSession session = parkingSessionRepository.findByLicensePlate(licensePlate)
-                .orElseThrow(() -> new IllegalArgumentException("Active parking session not found for license plate: " + licensePlate));
+                .orElseThrow(() -> new EntityNotFoundException("Active parking session not found for license plate: " + licensePlate));
 
         Spot spot = spotRepository.findByLatitudeAndLongitude(latitude, longitude)
-                .orElseThrow(() -> new IllegalArgumentException("Parking spot not found at the given location."));
+                .orElseThrow(() -> new EntityNotFoundException("Parking spot not found at the given location."));
 
-        if (spot.isOccupied()) throw new IllegalStateException("Parking spot at the given location is already occupied.");
+        if (spot.isOccupied()) throw new SpotAlredyOccupiedException(spot.getId());
 
         String sectorName = spot.getSectorName();
 
         if (occupancyService.isSectorFull(sectorName)) {
-            throw new IllegalStateException(
-                    "Sector " + sectorName + " is full. Unable to find a parking spot.");
+            throw new SectorFullException(sectorName);
         }
 
         Sector sector = sectorRepository.findByName(sectorName)
-                .orElseThrow(() -> new IllegalArgumentException(
+                .orElseThrow(() -> new EntityNotFoundException(
                         "Sector not found: " + sectorName));
 
         BigDecimal appliedPrice = pricingService.calculateAppliedPrice(
