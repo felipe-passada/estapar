@@ -13,6 +13,4 @@ public interface ParkingSessionRepository {
     ParkingSession save(ParkingSession parkingSession);
 
     void delete(ParkingSession parkingSession);
-
-    Optional<ParkingSession> findByLicensePlateAndExitTimeIsNull(String licensePlate);
 }

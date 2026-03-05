@@ -9,6 +9,4 @@ public interface JpaParkingSessionRepository extends JpaRepository<ParkingSessio
 
     Optional<ParkingSessionEntity> findByLicensePlate(String licensePlate);
     Optional<ParkingSessionEntity> findBySpotId(Long spotId);
-    Optional<ParkingSessionEntity> findByLicensePlateAndExitTimeIsNull(String licensePlate);
-
 }
