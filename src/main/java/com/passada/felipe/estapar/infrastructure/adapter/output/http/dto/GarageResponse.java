@@ -7,7 +7,8 @@ import java.time.LocalTime;
 import java.util.List;
 
 public record GarageResponse(
-        List<SectorData> garage
+        List<SectorData> garage,
+        List<SpotData> spots
 ) {
     public record SectorData(
             String sector,
@@ -15,8 +16,7 @@ public record GarageResponse(
             @JsonProperty("max_capacity") Integer maxCapacity,
             @JsonProperty("open_hour") LocalTime openHour,
             @JsonProperty("close_hour") LocalTime closeHour,
-            @JsonProperty("duration_limit_minutes") Integer durationLimitMinutes,
-            List<SpotData> spots
+            @JsonProperty("duration_limit_minutes") Integer durationLimitMinutes
     ) {}
 
     public record SpotData(

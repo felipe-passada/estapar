@@ -84,7 +84,7 @@ public class GarageInitializer {
     }
 
     private void initializeSpots(GarageResponse garageData) {
-        if (garageData.garage() == null || garageData.garage().isEmpty()) {
+        if (garageData.spots() == null || garageData.spots().isEmpty()) {
             log.warn("Nenhuma vaga recebida do simulador.");
             return;
         }
@@ -93,19 +93,16 @@ public class GarageInitializer {
                 .map(spot -> spot.getLatitude() + "_" + spot.getLongitude())
                 .collect(Collectors.toSet());
 
-        List<Spot> newSpots = garageData.garage().stream()
-                .filter(sd -> sd.spots() != null)
-                .flatMap(sd -> sd.spots().stream()
-                        .filter(spot -> !existingSpotKeys.contains(spot.lat() + "_" + spot.lng()))
-                        .map(spot -> new Spot(
-                                spot.id(),
-                                spot.sector(),
-                                spot.lat(),
-                                spot.lng(),
-                                spot.occupied() != null ? spot.occupied() : false
-                        ))
-                )
-                .toList();
+        List<Spot> newSpots = garageData.spots().stream()
+            .filter(spot -> !existingSpotKeys.contains(spot.lat() + "_" + spot.lng()))
+            .map(spot -> new Spot(
+                        null,
+                        spot.sector(),
+                        spot.lat(),
+                        spot.lng(),
+                        spot.occupied()
+            ))
+            .toList();
 
         if (newSpots.isEmpty()) {
             log.info("Todas as vagas já existem no banco.");

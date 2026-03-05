@@ -34,9 +34,7 @@ public class GarageSimulatorClient {
                 : 0;
 
         var totalSpots = response != null && response.garage() != null
-                ? response.garage().stream()    .filter(sd -> sd.spots() != null)
-                .mapToLong(sd -> sd.spots().size())
-                .sum()
+                ? response.spots().size()
                 : 0;
 
         log.info("Successfully retrieved garage data. Sectors: {}, Spots: {}", totalSectors, totalSpots);
