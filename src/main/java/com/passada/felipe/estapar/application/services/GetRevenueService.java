@@ -25,6 +25,7 @@ public class GetRevenueService implements GetRevenueUseCase {
 
         return entries.stream()
                 .map(RevenueEntry::getTotalAmount)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
+                .reduce(BigDecimal.ZERO, BigDecimal::add)
+                .setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 }
