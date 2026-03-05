@@ -1,0 +1,56 @@
+2026-03-04T15:52:36.791832Z  INFO garage_simulator: Simulator starting on 0.0.0.0:3000
+2026-03-04T15:53:12.218777Z  INFO garage_simulator: Simulation started after /garage was called.
+2026-03-04T15:53:17.381242Z  INFO garage_simulator: Entry successful for plate: LY86764
+2026-03-04T15:53:17.506907Z  INFO garage_simulator: Parked successful for plate: LY86764
+2026-03-04T15:53:22.578936Z  INFO garage_simulator: Entry successful for plate: TLV37760
+2026-03-04T15:53:22.647905Z  INFO garage_simulator: Parked successful for plate: TLV37760
+2026-03-04T15:53:27.291813Z  INFO garage_simulator: Exit successful for plate: LY86764
+2026-03-04T15:53:27.291828Z  INFO garage_simulator: Current revenue per sector: {"B": 4.1}
+2026-03-04T15:53:27.716202Z  INFO garage_simulator: Entry successful for plate: XO07654
+2026-03-04T15:53:27.787496Z  INFO garage_simulator: Parked successful for plate: XO07654
+2026-03-04T15:53:32.855095Z  INFO garage_simulator: Entry successful for plate: RY07107
+2026-03-04T15:53:32.923024Z  INFO garage_simulator: Parked successful for plate: RY07107
+2026-03-04T15:53:38.015076Z  INFO garage_simulator: Entry successful for plate: D07678
+2026-03-04T15:53:38.083532Z  INFO garage_simulator: Parked successful for plate: D07678
+2026-03-04T15:53:42.307382Z  INFO garage_simulator: Exit successful for plate: RY07107
+2026-03-04T15:53:42.307395Z  INFO garage_simulator: Current revenue per sector: {"B": 8.2}
+2026-03-04T15:53:43.149635Z  INFO garage_simulator: Entry successful for plate: YXK08504
+2026-03-04T15:53:43.213763Z  INFO garage_simulator: Parked successful for plate: YXK08504
+2026-03-04T15:53:48.282991Z  INFO garage_simulator: Entry successful for plate: BGK37900
+2026-03-04T15:53:48.347338Z  INFO garage_simulator: Parked successful for plate: BGK37900
+2026-03-04T15:53:53.412250Z  INFO garage_simulator: Entry successful for plate: DL08041
+2026-03-04T15:53:53.477582Z  INFO garage_simulator: Parked successful for plate: DL08041
+2026-03-04T15:53:57.326324Z  INFO garage_simulator: Exit successful for plate: BGK37900
+2026-03-04T15:53:57.326342Z  INFO garage_simulator: Current revenue per sector: {"B": 12.299999999999999}
+2026-03-04T15:53:58.541909Z  INFO garage_simulator: Entry successful for plate: YSC86810
+2026-03-04T15:53:58.605946Z  INFO garage_simulator: Parked successful for plate: YSC86810
+2026-03-04T15:54:03.689633Z  INFO garage_simulator: Entry successful for plate: KC96686
+2026-03-04T15:54:03.757408Z  INFO garage_simulator: Parked successful for plate: KC96686
+2026-03-04T15:54:08.827193Z  INFO garage_simulator: Entry successful for plate: EB38114
+2026-03-04T15:54:08.900825Z  INFO garage_simulator: Parked successful for plate: EB38114
+2026-03-04T15:54:12.344447Z  INFO garage_simulator: Exit successful for plate: TLV37760
+2026-03-04T15:54:12.344461Z  INFO garage_simulator: Current revenue per sector: {"A": 40.5, "B": 12.299999999999999}
+2026-03-04T15:54:13.971750Z  INFO garage_simulator: Entry successful for plate: IJT08751
+2026-03-04T15:54:14.039186Z  INFO garage_simulator: Parked successful for plate: IJT08751
+2026-03-04T15:54:19.104502Z  INFO garage_simulator: Entry successful for plate: ZPZ36737
+2026-03-04T15:54:19.183146Z  INFO garage_simulator: Parked successful for plate: ZPZ36737
+2026-03-04T15:54:24.247790Z  INFO garage_simulator: Entry successful for plate: ECH68795
+2026-03-04T15:54:24.314194Z  INFO garage_simulator: Parked successful for plate: ECH68795
+2026-03-04T15:54:27.361778Z  INFO garage_simulator: Exit successful for plate: XO07654
+2026-03-04T15:54:27.361793Z  INFO garage_simulator: Current revenue per sector: {"A": 40.5, "B": 16.4}
+2026-03-04T15:54:29.379454Z  INFO garage_simulator: Entry successful for plate: NM86766
+2026-03-04T15:54:29.443288Z  INFO garage_simulator: Parked successful for plate: NM86766
+2026-03-04T15:54:34.506663Z  INFO garage_simulator: Entry successful for plate: FFI16881
+2026-03-04T15:54:34.574453Z  INFO garage_simulator: Parked successful for plate: FFI16881
+2026-03-04T15:54:39.643241Z  INFO garage_simulator: Entry successful for plate: BKM48053
+2026-03-04T15:54:39.707487Z  INFO garage_simulator: Parked successful for plate: BKM48053
+2026-03-04T15:54:42.377931Z  INFO garage_simulator: Exit successful for plate: IJT08751
+2026-03-04T15:54:42.377944Z  INFO garage_simulator: Current revenue per sector: {"A": 40.5, "B": 20.5}
+2026-03-04T15:54:44.774219Z  INFO garage_simulator: Entry successful for plate: TG56546
+2026-03-04T15:54:44.841613Z  INFO garage_simulator: Parked successful for plate: TG56546
+2026-03-04T15:54:49.906760Z  INFO garage_simulator: Entry successful for plate: KXG58338
+2026-03-04T15:54:49.970624Z  INFO garage_simulator: Parked successful for plate: KXG58338
+2026-03-04T15:54:55.038409Z  INFO garage_simulator: Entry successful for plate: GTD36911
+2026-03-04T15:54:55.103776Z  INFO garage_simulator: Parked successful for plate: GTD36911
+2026-03-04T15:54:57.396061Z  INFO garage_simulator: Exit successful for plate: BKM48053
+2026-03-04T15:54:57.396081Z  INFO garage_simulator: Current revenue per sector: {"A": 40.5, "B": 24.6}

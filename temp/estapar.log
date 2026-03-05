@@ -1,0 +1,231 @@
+2026-03-04T13:02:45.921-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=OIT08959
+2026-03-04T13:02:49.827-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=OIT08959, entryTime=2026-03-04T16:02:45Z
+2026-03-04T13:02:49.852-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=OIT08959, entryTime=2026-03-04T16:02:45Z
+2026-03-04T13:02:49.939-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=OIT08959
+2026-03-04T13:02:49.941-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=OIT08959, lat=-23.561344, lng=-46.655641
+2026-03-04T13:02:49.970-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=OIT08959, sector=B, spot=18, appliedPrice=3.69
+2026-03-04T13:02:55.054-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=ZF87577
+2026-03-04T13:02:55.055-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=ZF87577, entryTime=2026-03-04T16:02:55Z
+2026-03-04T13:02:55.063-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=ZF87577, entryTime=2026-03-04T16:02:55Z
+2026-03-04T13:02:55.135-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=ZF87577
+2026-03-04T13:02:55.136-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=ZF87577, lat=-23.561304, lng=-46.655601
+2026-03-04T13:02:55.145-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=ZF87577, sector=B, spot=20, appliedPrice=3.69
+2026-03-04T13:02:55.833-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=ZF87577
+2026-03-04T13:02:55.835-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=ZF87577, exitTime=2026-03-04T16:02:55Z
+2026-03-04T13:02:55.839-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessExitService    : Spot 20 marked as unoccupied
+2026-03-04T13:04:05.624-03:00  WARN 15015 --- [estapar] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s695ms203µs212ns).
+2026-03-04T13:04:08.101-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=WXU37968
+2026-03-04T13:04:12.649-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=WXU37968, entryTime=2026-03-04T16:03:00Z
+2026-03-04T13:04:37.491-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=WXU37968, entryTime=2026-03-04T16:03:00Z
+2026-03-04T13:04:37.497-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=ZF87577, totalFee=0
+2026-03-04T13:04:37.497-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:04:37.583-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=WXU37968
+2026-03-04T13:04:37.584-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=WXU37968, lat=-23.561664, lng=-46.655961
+2026-03-04T13:04:37.593-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=WXU37968, sector=A, spot=2, appliedPrice=36.45
+2026-03-04T13:04:42.657-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=EQT18712
+2026-03-04T13:04:42.658-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=EQT18712, entryTime=2026-03-04T16:04:42Z
+2026-03-04T13:04:42.665-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=EQT18712, entryTime=2026-03-04T16:04:42Z
+2026-03-04T13:04:42.723-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=EQT18712
+2026-03-04T13:04:42.723-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=EQT18712, lat=-23.561104, lng=-46.655401
+2026-03-04T13:04:42.730-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=EQT18712, sector=B, spot=30, appliedPrice=3.69
+2026-03-04T13:04:47.789-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=SXM88360
+2026-03-04T13:04:47.790-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=SXM88360, entryTime=2026-03-04T16:04:47Z
+2026-03-04T13:04:47.797-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=SXM88360, entryTime=2026-03-04T16:04:47Z
+2026-03-04T13:04:47.855-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=SXM88360
+2026-03-04T13:04:47.856-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=SXM88360, lat=-23.561504, lng=-46.655801
+2026-03-04T13:04:47.861-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=SXM88360, sector=A, spot=10, appliedPrice=36.45
+2026-03-04T13:04:52.585-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=OIT08959
+2026-03-04T13:04:52.586-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=OIT08959, exitTime=2026-03-04T16:04:52Z
+2026-03-04T13:04:52.588-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessExitService    : Spot 18 marked as unoccupied
+2026-03-04T13:05:03.819-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=NDG16932
+2026-03-04T13:05:18.429-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=NDG16932, entryTime=2026-03-04T16:04:52Z
+2026-03-04T13:05:27.098-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=OIT08959, totalFee=0
+2026-03-04T13:05:27.098-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:05:27.099-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=NDG16932, entryTime=2026-03-04T16:04:52Z
+2026-03-04T13:05:27.168-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=NDG16932
+2026-03-04T13:05:27.169-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=NDG16932, lat=-23.561644, lng=-46.655941
+2026-03-04T13:05:27.181-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=NDG16932, sector=A, spot=3, appliedPrice=36.45
+2026-03-04T13:05:32.247-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=AG98763
+2026-03-04T13:05:32.248-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=AG98763, entryTime=2026-03-04T16:05:32Z
+2026-03-04T13:05:32.253-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=AG98763, entryTime=2026-03-04T16:05:32Z
+2026-03-04T13:05:32.311-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=AG98763
+2026-03-04T13:05:32.312-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=AG98763, lat=-23.561304, lng=-46.655601
+2026-03-04T13:05:32.318-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=AG98763, sector=B, spot=20, appliedPrice=3.69
+2026-03-04T13:05:37.380-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=QKN78533
+2026-03-04T13:05:37.381-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=QKN78533, entryTime=2026-03-04T16:05:37Z
+2026-03-04T13:05:37.386-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=QKN78533, entryTime=2026-03-04T16:05:37Z
+2026-03-04T13:05:37.444-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=QKN78533
+2026-03-04T13:05:37.445-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=QKN78533, lat=-23.561524, lng=-46.655821
+2026-03-04T13:05:37.450-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=QKN78533, sector=A, spot=9, appliedPrice=40.50
+2026-03-04T13:05:42.170-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=SXM88360
+2026-03-04T13:05:42.171-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=SXM88360, exitTime=2026-03-04T16:05:42Z
+2026-03-04T13:05:42.173-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : Spot 10 marked as unoccupied
+2026-03-04T13:06:00.549-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=DAM07942
+2026-03-04T13:06:14.856-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=DAM07942, entryTime=2026-03-04T16:05:42Z
+2026-03-04T13:06:14.861-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=SXM88360, totalFee=0
+2026-03-04T13:06:14.861-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:06:14.863-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=DAM07942, entryTime=2026-03-04T16:05:42Z
+2026-03-04T13:06:14.929-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=DAM07942
+2026-03-04T13:06:14.930-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=DAM07942, lat=-23.561344, lng=-46.655641
+2026-03-04T13:06:14.936-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=DAM07942, sector=B, spot=18, appliedPrice=3.69
+2026-03-04T13:06:19.995-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=VQ17585
+2026-03-04T13:06:19.996-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=VQ17585, entryTime=2026-03-04T16:06:19Z
+2026-03-04T13:06:20.001-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=VQ17585, entryTime=2026-03-04T16:06:19Z
+2026-03-04T13:06:20.057-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=VQ17585
+2026-03-04T13:06:20.057-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=VQ17585, lat=-23.561544, lng=-46.655841
+2026-03-04T13:06:20.064-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=VQ17585, sector=A, spot=8, appliedPrice=40.50
+2026-03-04T13:06:25.125-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=MZE17884
+2026-03-04T13:06:25.126-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=MZE17884, entryTime=2026-03-04T16:06:25Z
+2026-03-04T13:06:25.130-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=MZE17884, entryTime=2026-03-04T16:06:25Z
+2026-03-04T13:06:25.185-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=MZE17884
+2026-03-04T13:06:25.186-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=MZE17884, lat=-23.561284, lng=-46.655581
+2026-03-04T13:06:25.191-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=MZE17884, sector=B, spot=21, appliedPrice=3.69
+2026-03-04T13:06:29.883-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=VQ17585
+2026-03-04T13:06:29.884-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=VQ17585, exitTime=2026-03-04T16:06:29Z
+2026-03-04T13:06:29.886-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : Spot 8 marked as unoccupied
+2026-03-04T13:07:00.579-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=F26967
+2026-03-04T13:07:00.580-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=F26967, entryTime=2026-03-04T16:06:30Z
+2026-03-04T13:07:02.214-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=VQ17585, totalFee=0
+2026-03-04T13:07:02.214-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:07:02.215-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=F26967, entryTime=2026-03-04T16:06:30Z
+2026-03-04T13:07:02.280-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=F26967
+2026-03-04T13:07:02.281-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=F26967, lat=-23.561604, lng=-46.655901
+2026-03-04T13:07:02.285-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=F26967, sector=A, spot=5, appliedPrice=40.50
+2026-03-04T13:07:07.347-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=WH77258
+2026-03-04T13:07:07.348-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=WH77258, entryTime=2026-03-04T16:07:07Z
+2026-03-04T13:07:07.352-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=WH77258, entryTime=2026-03-04T16:07:07Z
+2026-03-04T13:07:07.408-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=WH77258
+2026-03-04T13:07:07.409-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=WH77258, lat=-23.561684, lng=-46.655981
+2026-03-04T13:07:07.416-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=WH77258, sector=A, spot=1, appliedPrice=40.50
+2026-03-04T13:07:12.475-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=KV88261
+2026-03-04T13:07:40.536-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=WXU37968
+2026-03-04T13:07:40.537-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=KV88261, entryTime=2026-03-04T16:07:12Z
+2026-03-04T13:08:17.580-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=WXU37968, exitTime=2026-03-04T16:07:17Z
+2026-03-04T13:08:17.581-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=KV88261, entryTime=2026-03-04T16:07:12Z
+2026-03-04T13:08:17.582-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessExitService    : Spot 2 marked as unoccupied
+2026-03-04T13:08:19.311-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=KV88261
+2026-03-04T13:08:19.312-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=KV88261, lat=-23.561244, lng=-46.655541
+2026-03-04T13:08:19.314-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=WXU37968, totalFee=0
+2026-03-04T13:08:19.314-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:08:19.318-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=KV88261, sector=B, spot=23, appliedPrice=3.69
+2026-03-04T13:08:24.383-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=OYG47208
+2026-03-04T13:08:24.384-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=OYG47208, entryTime=2026-03-04T16:08:24Z
+2026-03-04T13:08:24.388-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=OYG47208, entryTime=2026-03-04T16:08:24Z
+2026-03-04T13:08:24.445-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=OYG47208
+2026-03-04T13:08:24.446-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=OYG47208, lat=-23.561124, lng=-46.655421
+2026-03-04T13:08:24.451-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=OYG47208, sector=B, spot=29, appliedPrice=4.10
+2026-03-04T13:08:29.514-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=TW37000
+2026-03-04T13:08:29.515-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=TW37000, entryTime=2026-03-04T16:08:29Z
+2026-03-04T13:08:29.519-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=TW37000, entryTime=2026-03-04T16:08:29Z
+2026-03-04T13:08:29.575-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=TW37000
+2026-03-04T13:08:29.576-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=TW37000, lat=-23.561364, lng=-46.655661
+2026-03-04T13:08:29.584-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=TW37000, sector=B, spot=17, appliedPrice=4.10
+2026-03-04T13:08:34.328-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=DAM07942
+2026-03-04T13:08:34.329-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=DAM07942, exitTime=2026-03-04T16:08:34Z
+2026-03-04T13:08:34.331-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessExitService    : Spot 18 marked as unoccupied
+2026-03-04T13:08:34.333-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=DAM07942, totalFee=0
+2026-03-04T13:08:34.333-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:08:34.653-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=DH78664
+2026-03-04T13:08:34.654-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=DH78664, entryTime=2026-03-04T16:08:34Z
+2026-03-04T13:08:34.660-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=DH78664, entryTime=2026-03-04T16:08:34Z
+2026-03-04T13:08:34.722-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=DH78664
+2026-03-04T13:08:34.723-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=DH78664, lat=-23.561324, lng=-46.655621
+2026-03-04T13:08:34.730-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=DH78664, sector=B, spot=19, appliedPrice=4.10
+2026-03-04T13:08:39.791-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=ORK66715
+2026-03-04T13:08:39.792-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=ORK66715, entryTime=2026-03-04T16:08:39Z
+2026-03-04T13:08:39.796-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=ORK66715, entryTime=2026-03-04T16:08:39Z
+2026-03-04T13:08:39.853-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=ORK66715
+2026-03-04T13:08:39.853-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=ORK66715, lat=-23.561424, lng=-46.655721
+2026-03-04T13:08:39.857-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=ORK66715, sector=B, spot=14, appliedPrice=4.10
+2026-03-04T13:08:44.916-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=UJH28164
+2026-03-04T13:08:44.917-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=UJH28164, entryTime=2026-03-04T16:08:44Z
+2026-03-04T13:08:44.921-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=UJH28164, entryTime=2026-03-04T16:08:44Z
+2026-03-04T13:08:44.979-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=UJH28164
+2026-03-04T13:08:44.980-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=UJH28164, lat=-23.561504, lng=-46.655801
+2026-03-04T13:08:44.984-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=UJH28164, sector=A, spot=10, appliedPrice=40.50
+2026-03-04T13:08:49.343-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=UJH28164
+2026-03-04T13:08:49.344-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=UJH28164, exitTime=2026-03-04T16:08:49Z
+2026-03-04T13:08:49.345-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessExitService    : Spot 10 marked as unoccupied
+2026-03-04T13:08:49.347-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=UJH28164, totalFee=0
+2026-03-04T13:08:49.347-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:08:50.042-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=XXR59055
+2026-03-04T13:08:50.043-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=XXR59055, entryTime=2026-03-04T16:08:49Z
+2026-03-04T13:08:50.047-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=XXR59055, entryTime=2026-03-04T16:08:49Z
+2026-03-04T13:08:50.102-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=XXR59055
+2026-03-04T13:08:50.103-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=XXR59055, lat=-23.561504, lng=-46.655801
+2026-03-04T13:08:50.107-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=XXR59055, sector=A, spot=10, appliedPrice=40.50
+2026-03-04T13:08:55.171-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=PJ68817
+2026-03-04T13:08:55.172-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=PJ68817, entryTime=2026-03-04T16:08:55Z
+2026-03-04T13:08:55.176-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=PJ68817, entryTime=2026-03-04T16:08:55Z
+2026-03-04T13:08:55.235-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=PJ68817
+2026-03-04T13:08:55.236-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=PJ68817, lat=-23.561204, lng=-46.655501
+2026-03-04T13:08:55.240-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=PJ68817, sector=B, spot=25, appliedPrice=4.10
+2026-03-04T13:09:00.323-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=TNK77816
+2026-03-04T13:09:00.323-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=TNK77816, entryTime=2026-03-04T16:09:00Z
+2026-03-04T13:09:00.327-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=TNK77816, entryTime=2026-03-04T16:09:00Z
+2026-03-04T13:09:00.402-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=TNK77816
+2026-03-04T13:09:00.402-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=TNK77816, lat=-23.561404, lng=-46.655701
+2026-03-04T13:09:00.407-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=TNK77816, sector=B, spot=15, appliedPrice=4.10
+2026-03-04T13:09:04.362-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=ORK66715
+2026-03-04T13:09:04.362-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=ORK66715, exitTime=2026-03-04T16:09:04Z
+2026-03-04T13:09:04.364-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : Spot 14 marked as unoccupied
+2026-03-04T13:09:04.366-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=ORK66715, totalFee=0
+2026-03-04T13:09:04.366-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:09:05.467-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=QWC98671
+2026-03-04T13:09:05.467-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=QWC98671, entryTime=2026-03-04T16:09:05Z
+2026-03-04T13:09:05.471-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=QWC98671, entryTime=2026-03-04T16:09:05Z
+2026-03-04T13:09:05.525-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=QWC98671
+2026-03-04T13:09:05.526-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=QWC98671, lat=-23.561444, lng=-46.655741
+2026-03-04T13:09:05.530-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=QWC98671, sector=B, spot=13, appliedPrice=4.10
+2026-03-04T13:09:10.588-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=LZC57671
+2026-03-04T13:09:10.589-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=LZC57671, entryTime=2026-03-04T16:09:10Z
+2026-03-04T13:09:10.593-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=LZC57671, entryTime=2026-03-04T16:09:10Z
+2026-03-04T13:09:10.648-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=LZC57671
+2026-03-04T13:09:10.649-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=LZC57671, lat=-23.561484, lng=-46.655781
+2026-03-04T13:09:10.653-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=LZC57671, sector=B, spot=11, appliedPrice=4.51
+2026-03-04T13:09:15.712-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=HU87566
+2026-03-04T13:09:15.713-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=HU87566, entryTime=2026-03-04T16:09:15Z
+2026-03-04T13:09:15.716-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=HU87566, entryTime=2026-03-04T16:09:15Z
+2026-03-04T13:09:15.771-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=HU87566
+2026-03-04T13:09:15.772-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=HU87566, lat=-23.561224, lng=-46.655521
+2026-03-04T13:09:15.776-03:00  INFO 15015 --- [estapar] [nio-3003-exec-5] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=HU87566, sector=B, spot=24, appliedPrice=4.51
+2026-03-04T13:09:19.384-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=QWC98671
+2026-03-04T13:09:19.385-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=QWC98671, exitTime=2026-03-04T16:09:19Z
+2026-03-04T13:09:19.387-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : Spot 13 marked as unoccupied
+2026-03-04T13:09:19.389-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=QWC98671, totalFee=0
+2026-03-04T13:09:19.389-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:09:20.836-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=NHI66925
+2026-03-04T13:09:20.837-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=NHI66925, entryTime=2026-03-04T16:09:20Z
+2026-03-04T13:09:20.841-03:00  INFO 15015 --- [estapar] [io-3003-exec-10] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=NHI66925, entryTime=2026-03-04T16:09:20Z
+2026-03-04T13:09:20.896-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=NHI66925
+2026-03-04T13:09:20.897-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=NHI66925, lat=-23.561424, lng=-46.655721
+2026-03-04T13:09:20.901-03:00  INFO 15015 --- [estapar] [nio-3003-exec-1] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=NHI66925, sector=B, spot=14, appliedPrice=4.51
+2026-03-04T13:09:25.962-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=MP08851
+2026-03-04T13:09:25.962-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=MP08851, entryTime=2026-03-04T16:09:25Z
+2026-03-04T13:09:25.966-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=MP08851, entryTime=2026-03-04T16:09:25Z
+2026-03-04T13:09:26.028-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=MP08851
+2026-03-04T13:09:26.030-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=MP08851, lat=-23.561584, lng=-46.655881
+2026-03-04T13:09:26.035-03:00  INFO 15015 --- [estapar] [nio-3003-exec-7] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=MP08851, sector=A, spot=6, appliedPrice=44.55
+2026-03-04T13:09:31.096-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=O87115
+2026-03-04T13:09:31.097-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=O87115, entryTime=2026-03-04T16:09:31Z
+2026-03-04T13:09:31.100-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=O87115, entryTime=2026-03-04T16:09:31Z
+2026-03-04T13:09:31.156-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=O87115
+2026-03-04T13:09:31.157-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=O87115, lat=-23.561664, lng=-46.655961
+2026-03-04T13:09:31.161-03:00  INFO 15015 --- [estapar] [nio-3003-exec-8] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=O87115, sector=A, spot=2, appliedPrice=44.55
+2026-03-04T13:09:34.403-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=EXIT, licensePlate=KV88261
+2026-03-04T13:09:34.403-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessExitService    : Processing EXIT: plate=KV88261, exitTime=2026-03-04T16:09:34Z
+2026-03-04T13:09:34.405-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessExitService    : Spot 23 marked as unoccupied
+2026-03-04T13:09:34.407-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessExitService    : EXIT processed successfully: plate=KV88261, totalFee=0
+2026-03-04T13:09:34.407-03:00  INFO 15015 --- [estapar] [nio-3003-exec-3] c.p.f.e.a.services.ProcessExitService    : Revenue entry totalAmount for session: totalAmount=0
+2026-03-04T13:09:36.243-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=AQ48558
+2026-03-04T13:09:36.243-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=AQ48558, entryTime=2026-03-04T16:09:36Z
+2026-03-04T13:09:36.247-03:00  INFO 15015 --- [estapar] [nio-3003-exec-4] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=AQ48558, entryTime=2026-03-04T16:09:36Z
+2026-03-04T13:09:36.305-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=AQ48558
+2026-03-04T13:09:36.306-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=AQ48558, lat=-23.561244, lng=-46.655541
+2026-03-04T13:09:36.309-03:00  INFO 15015 --- [estapar] [nio-3003-exec-9] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=AQ48558, sector=B, spot=23, appliedPrice=4.51
+2026-03-04T13:09:41.372-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=ENTRY, licensePlate=N88884
+2026-03-04T13:09:41.373-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : Processing ENTRY: plate=N88884, entryTime=2026-03-04T16:09:41Z
+2026-03-04T13:09:41.378-03:00  INFO 15015 --- [estapar] [nio-3003-exec-2] c.p.f.e.a.services.ProcessEntryService   : ENTRY successfully registered: plate=N88884, entryTime=2026-03-04T16:09:41Z
+2026-03-04T13:09:41.466-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.i.a.input.web.WebhookController  : Incoming webhook event: type=PARKED, licensePlate=N88884
+2026-03-04T13:09:41.466-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED processing: plate=N88884, lat=-23.561264, lng=-46.655561
+2026-03-04T13:09:41.470-03:00  INFO 15015 --- [estapar] [nio-3003-exec-6] c.p.f.e.a.services.ProcessParkedService  : PARKED successfully registered: plate=N88884, sector=B, spot=22, appliedPrice=4.51
