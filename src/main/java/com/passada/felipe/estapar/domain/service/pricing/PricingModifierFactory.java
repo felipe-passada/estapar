@@ -19,10 +19,18 @@ public class PricingModifierFactory {
      * @throws IllegalStateException if strategy not found for occupancy rate
      */
     public PricingModifierStrategy resolve(double occupancyRate) {
-        return strategies.stream()
+        List<PricingModifierStrategy> matching = strategies.stream()
                 .filter(strategy -> strategy.applies(occupancyRate))
+                .toList();
+
+        if (matching.size() > 1) {
+            throw new IllegalStateException(
+                    "Multiple strategies available for occupancy rate: " + occupancyRate);
+        }
+
+        return matching.stream()
                 .findFirst()
                 .orElseThrow(() -> new IllegalStateException(
-                        "Nenhum modificador de preço encontrado para ocupação: " + occupancyRate));
+                        "Price modifier not found for: " + occupancyRate));
     }
 }
