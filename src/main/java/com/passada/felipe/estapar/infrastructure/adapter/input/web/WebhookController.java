@@ -4,6 +4,7 @@ import com.passada.felipe.estapar.application.usecases.ProcessEntryUseCase;
 import com.passada.felipe.estapar.application.usecases.ProcessExitUseCase;
 import com.passada.felipe.estapar.application.usecases.ProcessParkedUseCase;
 import com.passada.felipe.estapar.infrastructure.adapter.input.web.dto.WebhookEventRequest;
+import io.micrometer.core.annotation.Timed;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -34,6 +35,7 @@ public class WebhookController {
             @ApiResponse(responseCode = "422", description = "Business rule violation (e.g. parking lot is full)"),
             @ApiResponse(responseCode = "500", description = "Internal server error")
     })
+    @Timed(value = "api.webhook.request", description = "webhook total processing time", histogram = true)
     public ResponseEntity<Void> receiveEvent(@RequestBody WebhookEventRequest request) {
         log.info("Incoming webhook event: type={}, licensePlate={}", request.type(), request.plate());
 

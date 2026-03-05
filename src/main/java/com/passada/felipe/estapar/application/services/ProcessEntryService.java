@@ -6,6 +6,7 @@ import com.passada.felipe.estapar.domain.exception.GarageFullException;
 import com.passada.felipe.estapar.domain.model.ParkingSession;
 import com.passada.felipe.estapar.domain.repository.ParkingSessionRepository;
 import com.passada.felipe.estapar.domain.service.OccupancyService;
+import io.micrometer.core.annotation.Timed;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ public class ProcessEntryService implements ProcessEntryUseCase {
 
     @Override
     @Transactional
+    @Timed(value = "business.parking.entry", description = "Time spent processing parking entry event")
     public void execute(String licensePlate, Instant entryTime) {
         log.info("Processing ENTRY: plate={}, entryTime={}", licensePlate, entryTime);
 

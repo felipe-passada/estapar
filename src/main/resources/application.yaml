@@ -9,15 +9,46 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASS}
     driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: HikariPool-estapar
+      maximum-pool-size: 3
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+      test-on-borrow: true
   jpa:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQLDialect
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
+        generate_statistics: true
 
 garage:
   simulator:
-    url: http://localhost:3000
+    url: ${GARAGE_SIMULATOR_URL:http://localhost:3000}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+        hikaricp:
+          connections:
+            usage: true

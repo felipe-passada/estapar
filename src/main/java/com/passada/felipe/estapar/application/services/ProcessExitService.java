@@ -9,6 +9,7 @@ import com.passada.felipe.estapar.domain.repository.ParkingSessionRepository;
 import com.passada.felipe.estapar.domain.repository.RevenueEntryRepository;
 import com.passada.felipe.estapar.domain.repository.SpotRepository;
 import com.passada.felipe.estapar.domain.service.PricingService;
+import io.micrometer.core.annotation.Timed;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +31,7 @@ public class ProcessExitService implements ProcessExitUseCase {
 
     @Override
     @Transactional
+    @Timed(value = "business.parking.exit", description = "Time spent processing parking exit event")
     public void execute(String licensePlate, Instant exitTime) {
         log.info("Processing EXIT: plate={}, exitTime={}", licensePlate, exitTime);
         ParkingSession session = parkingSessionRepository.findByLicensePlate(licensePlate)

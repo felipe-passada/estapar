@@ -12,6 +12,7 @@ import com.passada.felipe.estapar.domain.repository.SectorRepository;
 import com.passada.felipe.estapar.domain.repository.SpotRepository;
 import com.passada.felipe.estapar.domain.service.OccupancyService;
 import com.passada.felipe.estapar.domain.service.PricingService;
+import io.micrometer.core.annotation.Timed;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,7 @@ public class ProcessParkedService implements ProcessParkedUseCase {
 
     @Override
     @Transactional
+    @Timed(value = "business.parking.entry", description = "Time spent processing parking event")
     public void execute(String licensePlate, Double latitude, Double longitude) {
         log.info("PARKED processing: plate={}, lat={}, lng={}", licensePlate, latitude, longitude);
 
