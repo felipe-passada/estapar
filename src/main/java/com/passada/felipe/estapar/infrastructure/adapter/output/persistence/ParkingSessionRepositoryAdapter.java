@@ -40,6 +40,11 @@ public class ParkingSessionRepositoryAdapter implements ParkingSessionRepository
                 .ifPresent(jpaParkingSessionRepository::delete);
     }
 
+    @Override
+    public void deleteAll() {
+        jpaParkingSessionRepository.deleteAll();
+    }
+
     private ParkingSession toDomain(ParkingSessionEntity entity) {
         return ParkingSession.builder()
                 .licensePlate(entity.getLicensePlate())

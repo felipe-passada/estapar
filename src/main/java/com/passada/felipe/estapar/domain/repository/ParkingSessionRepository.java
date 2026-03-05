@@ -13,4 +13,6 @@ public interface ParkingSessionRepository {
     ParkingSession save(ParkingSession parkingSession);
 
     void delete(ParkingSession parkingSession);
+
+    void deleteAll();
 }

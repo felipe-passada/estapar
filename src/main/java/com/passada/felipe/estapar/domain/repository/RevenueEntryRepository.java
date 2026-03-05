@@ -12,4 +12,6 @@ public interface RevenueEntryRepository {
     List<RevenueEntry> findBySectorNameAndDate(String sectorName, LocalDate date);
 
     List<RevenueEntry> findByDate(LocalDate date);
+
+    void deleteAll();
 }

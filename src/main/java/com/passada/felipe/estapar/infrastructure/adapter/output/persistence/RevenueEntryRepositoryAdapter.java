@@ -38,6 +38,11 @@ public class RevenueEntryRepositoryAdapter implements RevenueEntryRepository {
                 .toList();
     }
 
+    @Override
+    public void deleteAll() {
+        jpaRevenueEntryRepository.deleteAll();
+    }
+
 
     private RevenueEntry toDomain(RevenueEntryEntity entity) {
         return RevenueEntry.builder()

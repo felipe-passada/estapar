@@ -17,4 +17,6 @@ public interface SectorRepository {
     List<Sector> findAllByName(Set<String> name);
 
     void saveAll(List<Sector> newSectors);
+
+    void deleteAll();
 }

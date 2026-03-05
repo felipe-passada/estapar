@@ -31,7 +31,6 @@ public class SectorRepositoryAdapter implements SectorRepository {
         return toDomain(saved);
     }
 
-    //TODO: Implements findAll method to return all sectors from database
     @Override
     public List<Sector> findAll() {
         return jpaSectorRepository.findAll()
@@ -54,6 +53,11 @@ public class SectorRepositoryAdapter implements SectorRepository {
                 .map(this::toEntity)
                 .toList();
         jpaSectorRepository.saveAll(entities);
+    }
+
+    @Override
+    public void deleteAll() {
+        jpaSectorRepository.deleteAll();
     }
 
     private Sector toDomain(SectorEntity entity) {

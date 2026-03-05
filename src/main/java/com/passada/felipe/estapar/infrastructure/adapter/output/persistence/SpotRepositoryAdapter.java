@@ -58,6 +58,11 @@ public class SpotRepositoryAdapter implements SpotRepository {
         jpaSpotRepository.saveAll(entities);
     }
 
+    @Override
+    public void deleteAll() {
+        jpaSpotRepository.deleteAll();
+    }
+
     private Spot toDomain(SpotEntity entity) {
         return Spot.builder()
                 .id(entity.getId())

@@ -18,4 +18,6 @@ public interface SpotRepository {
     List<Spot> findAll();
 
     void saveAll(List<Spot> newSpots);
+
+    void deleteAll();
 }
