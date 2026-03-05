@@ -11,7 +11,7 @@ public interface PricingService {
      * @param sectorName name of the sector where the price is being calculated
      * @return hourly price to be applied at entry
      */
-    public BigDecimal calculateAppliedPrice(BigDecimal basePrice, String sectorName);
+    BigDecimal calculateAppliedPrice(BigDecimal basePrice, String sectorName);
 
     /**
      * Return the price to be charged at exit based on the time parked and the price applied at entry.
@@ -21,5 +21,5 @@ public interface PricingService {
      * @param appliedPrice estimated hourly price calculated at entry
      * @return total price to be charged at exit
      */
-    public BigDecimal calculateFinalAmount(Instant entryTime, Instant exitTime, BigDecimal appliedPrice);
+    BigDecimal calculateFinalAmount(Instant entryTime, Instant exitTime, BigDecimal appliedPrice);
 }
