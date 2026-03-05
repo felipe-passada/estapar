@@ -27,10 +27,10 @@ public class ParkingSessionEntity {
     @Column(name = "entry_time", nullable = false)
     private Instant entryTime;
 
-    @Column(name = "applied_price", nullable = false, precision = 10, scale = 2)
+    @Column(name = "applied_price", precision = 10, scale = 2)
     private BigDecimal appliedPrice;
 
-    @Column(name = "sector_name", nullable = false, length = 50)
+    @Column(name = "sector_name", length = 50)
     private String sectorName;
 
     @Column(name = "spot_id")
