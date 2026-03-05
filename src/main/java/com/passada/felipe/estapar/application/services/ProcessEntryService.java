@@ -9,6 +9,7 @@ import com.passada.felipe.estapar.domain.service.OccupancyService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import jakarta.transaction.Transactional;
 
 import java.time.Instant;
 
@@ -20,10 +21,11 @@ public class ProcessEntryService implements ProcessEntryUseCase {
     private final OccupancyService occupancyService;
 
     @Override
+    @Transactional
     public void execute(String licensePlate, Instant entryTime) {
         log.info("Processing ENTRY: plate={}, entryTime={}", licensePlate, entryTime);
 
-        parkingSessionRepository.findByLicensePlateAndExitTimeIsNull(licensePlate)
+        parkingSessionRepository.findByLicensePlate(licensePlate)
                 .ifPresent(session -> {
                     throw new DuplicatedSessionException(licensePlate);
                 });
