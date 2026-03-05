@@ -19,7 +19,98 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        tag: "{{.Name}}"
+
+  simulator:
+    image: cfontes0estapar/garage-sim:1.0.0
+    container_name: estapar_simulator
+    # Necessário conforme requisitos do simulador
+    network_mode: "host"
+    environment:
+      WEBHOOK_URL: http://127.0.0.1:3003/webhook
+    logging:
+      driver: "json-file"
+      options:
+        tag: "{{.Name}}"
+
+  app:
+    build:
+      context: .
+      network: host
+    container_name: estapar_app
+    network_mode: "host"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://localhost:3306/estapar_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+      DB_USER: estapar
+      DB_PASS: estapar_pass
+      GARAGE_SIMULATOR_URL: http://127.0.0.1:3000
+    logging:
+      driver: "json-file"
+      options:
+        tag: "{{.Name}}"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: estapar_prometheus
+    network_mode: "host"
+    user: "root"
+    volumes:
+      - ./config/prometheus.yaml:/etc/prometheus/prometheus.yml:z
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    depends_on:
+      - app
+
+  loki:
+    image: grafana/loki:latest
+    container_name: estapar_loki
+    network_mode: "host" # Roda na porta 3100
+    command: -config.file=/etc/loki/local-config.yaml
+
+  promtail:
+    image: grafana/promtail:latest
+    container_name: estapar_promtail
+    network_mode: "host"
+    user: "root"
+    privileged: true
+    volumes:
+      - ./config/promtail-config.yaml:/etc/promtail/config.yml:z
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro,z
+      - /var/run/docker.sock:/var/run/docker.sock:ro,z
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: estapar_grafana
+    network_mode: "host"
+    user: "root"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SERVER_HTTP_PORT=3004
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./config/grafana-datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml:z
+      - ./config/grafana-dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml:z
+      - ./config/estapar-dashboard.json:/etc/grafana/provisioning/dashboards/estapar-dashboard.json:z
+    depends_on:
+      - prometheus
 
 volumes:
   mysql-data:
     name: estapar_mysql_data
+  prometheus-data:
+    name: estapar_prometheus_data
+  grafana-data:
+    name: estapar_grafana_data
